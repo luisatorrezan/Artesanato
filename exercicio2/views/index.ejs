@@ -1,0 +1,29 @@
+<%- include("partials/header.ejs") %>
+<body>
+    <%- include("partials/navbar.ejs") %>
+    <div class="container">
+        <hr>
+        <h1>Cadastrar Produtos</h1>
+        <a href="/cadastrar" class="btn btn-primary">Cadastrar</a>
+        <hr>
+        <div class="row">
+            <h1>Produtos Cadastrados</h1>
+            <% cadastra.forEach(produto => { %>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                          <hr>
+                            <h1 class="card-title"><%= produto.nome %></h1>
+                            <p class="card-text"><%= produto.descricao %></p>
+                            <p class="card-text"><strong>Preço:</strong> R$ <%= produto.preco %></p>
+                            <!-- Botão para ver detalhes do produto -->
+                            <a href="/produto/<%= produto.id %>" class="btn btn-primary">Ver Detalhes</a>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+</body>
+<%- include("partials/footer.ejs") %>

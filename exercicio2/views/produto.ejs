@@ -1,0 +1,23 @@
+<%- include("partials/header.ejs") %>
+<link rel="stylesheet" href="/css/style.css">
+<body>
+    <%- include("partials/navbar.ejs") %>
+    <div class="container">
+     <div class="card">
+    <img class="foto-produto" src="<%= produto.imagem ? '/images/' + produto.id : '/images/default.png' %>"  alt="Imagem do Produto">
+            <div class="card-body">
+    
+                <h5 class="card-title"><%= produto.nome %></h5>
+                <p class="card-text"><strong>Descrição:</strong> <%= produto.descricao %></p>
+                <p class="card-text"><strong>Preço:</strong> R$ <%= produto.preco %></p>
+
+                <form action="/deletar/<%= produto.id %>" method="POST" onsubmit="return confirm('Tem certeza que deseja excluir este produto?');">
+                    <button type="submit" class="btn btn-danger">Deletar</button>
+        
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+<%- include("partials/footer.ejs") %>

@@ -1,0 +1,100 @@
+.navbar{
+    background-color: #5a3600 ;
+    color: white ;
+    padding: 15px;
+    text-align: center;
+}
+.btn-primary{
+    background-color: #5a3600 ;
+    color: aliceblue;
+};
+.card{
+    max-width: 100%;
+    max-height: 100%;
+    align-items: center;
+    text-align: center;
+}
+.foto-produto {
+    width: 600px; /* Ocupa toda a largura do card */
+    height: 600px; /* Define uma altura máxima */
+    object-fit: cover; /* Garante que a imagem não distorça */
+    border-radius: 10px; /* Bordas arredondadas */
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    display: flex;
+    
+}
+.titulo{
+    color: aliceblue;
+}
+
+
+
+/*cadastrar*/
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fc;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding-top: 50px;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.card-header {
+    background-color: #865100 ;
+    color: white;
+    padding: 15px;
+    border-radius: 8px 8px 0 0;
+}
+
+.card-body {
+    background-color: white;
+    padding: 30px;
+    border-radius: 0 0 8px 8px;
+}
+
+.card-body label {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.card-body input, .card-body textarea {
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: 100%;
+}
+
+.card-body textarea {
+    resize: vertical;
+}
+
+.card-body input:focus, .card-body textarea:focus {
+    border-color: #865100 ;
+    outline: none;
+}
+
+button[type="submit"] {
+    background-color: #865100;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    border: none;
+    width: 100%;
+    font-size: 1.1rem;
+}
+
+button[type="submit"]:hover {
+    background-color: #865100;
+    cursor: pointer;
+}
+

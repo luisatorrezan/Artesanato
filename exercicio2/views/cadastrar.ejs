@@ -1,0 +1,33 @@
+<%- include("partials/header.ejs") %>
+<body>
+    <%- include("partials/navbar.ejs") %>
+    <div class="container">
+        <div class="card" id="formulario-pergunta">
+            <div class="card-header">
+                <h3>Realizar cadastro de produto</h3>
+            </div>
+            <div class="card-body">
+                <form method="POST" action="/salvarcadastro" enctype="multipart/form-data">
+                    <label>Nome</label>
+                    <input type="text" placeholder="Coloque o nome do produto" class="form-control" name="nome" required>
+                    <br>
+
+                    <label>Descrição</label>
+                    <textarea placeholder="Descreva seu produto aqui" class="form-control" name="descricao" required></textarea>
+                    <br>
+
+                    <label>Preço</label>
+                    <input type="number" step="0.01" placeholder="Preço do produto" class="form-control" name="preco" required>
+                    <br>
+
+                    <label>Imagem</label>
+                    <input type="file" class="form-control" name="imagem" accept="image/*">
+                    <br>
+
+                    <button class="btn btn-primary">Cadastrar Produto</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<%- include("partials/footer.ejs") %>
